@@ -5,7 +5,7 @@ FIND_PATH(
     GNURADIO_OSMOSDR_INCLUDE_DIRS
     NAMES source.h
     HINTS $ENV{GNURADIO_OSMOSDR_DIR}/include/osmosdr
-        ${PC_GNURADIO_OSMOSDR_INCLUDEDIR}
+        ${PC_GNURADIO_OSMOSDR_INCLUDEDIR}/osmosdr
         ${CMAKE_INSTALL_PREFIX}/include/osmosdr
     PATHS /usr/local/include/osmosdr
           /usr/include/osmosdr

@@ -8,10 +8,14 @@ if(NOT LIBBLADERF_FOUND)
   )
 
   find_library(LIBBLADERF_LIBRARIES NAMES bladeRF
-    PATHS
-    ${LIBBLADERF_PKG_LIBRARY_DIRS}
-    /usr/lib
-    /usr/local/lib
+    HINTS ${LIBBLADERF_PKG_LIBDIR}
+      ${CMAKE_INSTALL_PREFIX}/lib
+      ${CMAKE_INSTALL_PREFIX}/lib64
+      PATHS ${LIBBLADERF_PKG_LIBRARY_DIRS}
+        /usr/local/lib
+        /usr/local/lib64
+        /usr/lib
+        /usr/lib64
   )
 
 if(LIBBLADERF_INCLUDE_DIRS AND LIBBLADERF_LIBRARIES)
