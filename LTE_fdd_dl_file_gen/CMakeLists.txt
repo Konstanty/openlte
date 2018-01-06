@@ -8,6 +8,7 @@ install(TARGETS LTE_fdd_dl_fg LIBRARY DESTINATION lib${LIB_SUFFIX} ARCHIVE DESTI
 
 # Swig
 find_package(SWIG)
+find_package(PythonInterp 2.7 REQUIRED)
 find_package(PythonLibs)
 if(NOT SWIG_FOUND OR NOT PYTHONLIBS_FOUND)
     return()
